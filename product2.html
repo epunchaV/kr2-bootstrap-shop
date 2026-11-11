@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Пластик из водорослей — ТехноСтарт</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="css/custom.css">
+</head>
+<body>
+    <nav class="navbar navbar-expand-lg navbar-dark bg-dark sticky-top">
+        <div class="container">
+            <a class="navbar-brand fw-bold text-info" href="index.html">🔬 ТехноСтарт</a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav ms-auto">
+                    <li class="nav-item"><a class="nav-link" href="index.html">Главная</a></li>
+                    <li class="nav-item"><a class="nav-link" href="catalog.html">Каталог</a></li>
+                    <li class="nav-item"><a class="nav-link" href="experts.html">Экспертный совет</a></li>
+                    <li class="nav-item"><a class="nav-link" href="order.html">Подать заявку</a></li>
+                    <li class="nav-item"><a class="nav-link" href="contacts.html">Контакты</a></li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <main class="container my-5">
+        <nav aria-label="breadcrumb">
+        <ol class="breadcrumb">
+            <li class="breadcrumb-item"><a href="index.html">Главная</a></li>
+            <li class="breadcrumb-item"><a href="catalog.html">Каталог</a></li>
+            <li class="breadcrumb-item active" aria-current="page">Биотехнологии</li>
+        </ol>
+        </nav>
+
+        <div class="row g-5">
+        <div class="col-lg-7">
+            <div class="placeholder-image text-muted mb-4 fs-4">Образцы биоразлагаемой упаковки</div>
+            <h1 class="fw-bold mb-3">Пластик из водорослей</h1>
+            <p class="lead">Создание экологически чистой и коммерчески выгодной альтернативы традиционному пластику. Материал полностью разлагается в естественной почве за 14 дней без выделения микропластика.</p>
+            
+            <h4 class="fw-bold mt-4">Научная новизна</h4>
+            <p>Проект базируется на экстракции альгинатов и целлюлозы из быстрорастущих бурых водорослей. Полученный полимер обладает прочностью полиэтилена низкой плотности (LDPE), но при этом растворим в горячей воде и безопасен для окружающей среды при утилизации. Собранные средства необходимы для закупки лабораторного экструдера для формования первой мелкосерийной партии гранул и проведения международной сертификации биоразлагаемости.</p>
+        </div>
+
+        <div class="col-lg-5">
+            <div class="card p-4 shadow-sm border-0 border-top border-info border-3">
+            <span class="badge badge-tech align-self-start mb-3">Проверен Экспертным Советом</span>
+            
+            <h3 class="fw-bold mb-1">400 000 ₽</h3>
+            <p class="text-muted small">из 1 000 000 ₽ цели</p>
+            
+            <div class="progress mb-3" style="height: 12px;">
+                <div class="progress-bar bg-info progress-bar-striped progress-bar-animated" style="width: 40%"></div>
+            </div>
+
+            <div class="row text-center g-2 mb-4">
+                <div class="col-6 bg-body-secondary p-2 rounded">
+                <div class="fw-bold">89</div>
+                <small class="text-muted">спонсоров</small>
+                </div>
+                <div class="col-6 bg-body-secondary p-2 rounded">
+                <div class="fw-bold">32 дня</div>
+                <small class="text-muted">осталось</small>
+                </div>
+            </div>
+
+            <button class="btn btn-info text-white btn-lg w-100 mb-3 fw-bold" data-bs-toggle="modal" data-bs-target="#supportModal">Поддержать проект</button>
+            <a href="catalog.html" class="btn btn-outline-secondary btn-sm w-100">← Вернуться в каталог</a>
+
+            <hr>
+            
+            <h6 class="fw-bold">Характеристики кампании:</h6>
+            <table class="table table-sm table-borderless small mb-0">
+                <tbody>
+                <tr><td class="text-muted ps-0">Автор:</td><td>НИЛ «Зеленая Химия»</td></tr>
+                <tr><td class="text-muted ps-0">Стадия:</td><td>Лабораторная технология</td></tr>
+                <tr><td class="text-muted ps-0">Рецензия:</td><td>Положительная (Институт Биохимии)</td></tr>
+                </tbody>
+            </table>
+            </div>
+        </div>
+        </div>
+    </main>
+
+    <div class="modal fade" id="supportModal" tabindex="-1">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title fw-bold">Поддержка проекта</h5>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal"></button>
+                </div>
+                <div class="modal-body">
+                    <form>
+                        <div class="mb-3">
+                            <label class="form-label">Сумма взноса (₽)</label>
+                            <input type="number" class="form-control" value="1000">
+                        </div>
+                        <div class="mb-3">
+                            <label class="form-label">Ваше имя (или анонимно)</label>
+                            <input type="text" class="form-control" placeholder="Иван И.">
+                        </div>
+                        <div class="form-check mb-3">
+                            <input type="checkbox" class="form-check-input" id="termsCheck">
+                            <label class="form-check-label small" for="termsCheck">Согласен с правилами платформы</label>
+                        </div>
+                        <button type="submit" class="btn btn-info w-100 text-white fw-bold">Перейти к оплате</button>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <footer class="bg-dark text-white py-4 mt-5">
+        <div class="container text-center">
+            <p class="mb-0">&copy; 2026 ТехноСтарт. Платформа научного краудфандинга.</p>
+            <small class="mb-1">Проект разработан для поддержки инноваций и молодых ученых.</small>
+        </div>
+    </footer>
+    <script
+        src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js">
+    </script>
+    <script src="js/main.js"></script>
+</body>
+</html>

@@ -3,315 +3,225 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Каталог научных проектов — ТехноСтарт</title>
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
     <link rel="stylesheet" href="css/custom.css">
-    <title>Каталог — Bootstrap Shop</title>
 </head>
-<body class="bg-light">
-    <header class="bg-primary text-white py-4">
+<body>
+    <nav class="navbar navbar-expand-lg navbar-dark bg-dark sticky-top">
         <div class="container">
-            <div class="row align-items-center">
-                <div class="col-12 col-md-8">
-                    <h1 class="h3 mb-1">Bootstrap Shop</h1>
-                    <p class="mb-0 opacity-75">
-                        Учебный интернет-магазин на Bootstrap
-                    </p>
-                </div>
-
-                <div class="col-12 col-md-4 text-md-end mt-3 mt-md-0">
-                    <span class="badge bg-light text-primary">
-                        КР №2
-                    </span>
-                </div>
-            </div>
-        </div>
-    </header>
-    <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
-        <div class="container">
-            <a class="navbar-brand" href="index.html">Bootstrap Shop</a>
-
-            <button
-                class="navbar-toggler"
-                type="button"
-                data-bs-toggle="collapse"
-                data-bs-target="#mainNavbar"
-                aria-controls="mainNavbar"
-                aria-expanded="false"
-                aria-label="Переключить навигацию"
-            >
+            <a class="navbar-brand fw-bold text-info" href="index.html">🔬 ТехноСтарт</a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
                 <span class="navbar-toggler-icon"></span>
             </button>
-
-            <div class="collapse navbar-collapse" id="mainNavbar">
+            <div class="collapse navbar-collapse" id="navbarNav">
                 <ul class="navbar-nav ms-auto">
-                    <li class="nav-item">
-                        <a class="nav-link" href="index.html">Главная</a>
-                    </li>
-
-                    <li class="nav-item">
-                        <a class="nav-link active" href="catalog.html">Каталог</a>
-                    </li>
-
-                    <li class="nav-item">
-                        <a class="nav-link" href="product.html">Товар</a>
-                    </li>
-
-                    <li class="nav-item">
-                        <a class="nav-link" href="order.html">Заявка</a>
-                    </li>
-
-                    <li class="nav-item dropdown">
-                        <a
-                            class="nav-link dropdown-toggle"
-                            href="#"
-                            role="button"
-                            data-bs-toggle="dropdown"
-                            aria-expanded="false"
-                        >
-                            Дополнительно
-                        </a>
-                        <ul class="dropdown-menu">
-                            <li><a class="dropdown-item" href="catalog.html">Все товары</a></li>
-                            <li><a class="dropdown-item" href="order.html">Оформить заявку</a></li>
-                            <li><a class="dropdown-item" href="index.html#popular">Популярное</a></li>
-                        </ul>
-                    </li>
+                    <li class="nav-item"><a class="nav-link" href="index.html">Главная</a></li>
+                    <li class="nav-item"><a class="nav-link active" href="catalog.html">Каталог</a></li>
+                    <li class="nav-item"><a class="nav-link" href="experts.html">Экспертный совет</a></li>
+                    <li class="nav-item"><a class="nav-link" href="order.html">Подать заявку</a></li>
+                    <li class="nav-item"><a class="nav-link" href="contacts.html">Контакты</a></li>
                 </ul>
             </div>
         </div>
     </nav>
+
     <main class="container my-5">
-        <div class="alert alert-info" role="alert">
-            Выберите товар из каталога. Карточки товаров оформлены с помощью компонента Bootstrap `card`.
-        </div>
-
-        <div class="d-flex justify-content-between align-items-center mb-4">
-            <h1 class="h2 mb-0">Каталог товаров</h1>
-            <a class="btn btn-outline-primary" href="order.html">
-                Оставить заявку
-            </a>
-        </div>
-
         <div class="row g-4">
-            <div class="col-12 col-md-6 col-lg-4">
-                <div class="card h-100 shadow-sm">
-                    <div class="card-body d-flex flex-column">
-                        <div class="d-flex justify-content-between align-items-start mb-3">
-                            <h2 class="card-title h5">Товар 1</h2>
-                            <span class="badge bg-success">Новинка</span>
-                        </div>
 
-                        <p class="card-text text-muted">
-                            Краткое описание учебного товара для каталога.
-                        </p>
+        <aside class="col-lg-3">
+            <div class="card p-3 shadow-sm border-0 position-sticky" style="top: 90px;">
+                <h5 class="fw-bold mb-3">Направления</h5>
+                <div class="list-group list-group-flush mb-4">
+                    <button class="list-group-item list-group-item-action d-flex justify-content-between align-items-center active">
+                        Все направления <span class="badge bg-light text-dark rounded-pill">4</span>
+                    </button>
+                    <button class="list-group-item list-group-item-action d-flex justify-content-between align-items-center">
+                        Робототехника <span class="badge bg-secondary rounded-pill">2</span>
+                    </button>
+                    <button class="list-group-item list-group-item-action d-flex justify-content-between align-items-center">
+                        Биотехнологии <span class="badge bg-secondary rounded-pill">1</span>
+                    </button>
+                    <button class="list-group-item list-group-item-action d-flex justify-content-between align-items-center">
+                        Экология <span class="badge bg-secondary rounded-pill">1</span>
+                    </button>
+                </div>
 
-                        <p class="fw-bold fs-5 mt-auto">1000 руб.</p>
-
-                        <div class="d-flex gap-2">
-                            <a class="btn btn-primary" href="product.html">Подробнее</a>
-                            <button
-                            class="btn btn-outline-primary"
-                            type="button"
-                            data-bs-toggle="modal"
-                            data-bs-target="#orderModal"
-                            >
-                            Заказать
-                            </button>
-                        </div>
+                <h5 class="fw-bold mb-3">Стадия проекта</h5>
+                <div class="mb-4">
+                    <div class="form-check mb-2">
+                        <input class="form-check-input" type="checkbox" id="stage1" checked>
+                        <label class="form-check-label small" for="stage1">Идея / Исследование</label>
                     </div>
+                    <div class="form-check mb-2">
+                        <input class="form-check-input" type="checkbox" id="stage2" checked>
+                        <label class="form-check-label small" for="stage2">Действующий прототип</label>
+                    </div>
+                </div>
+
+                <h5 class="fw-bold mb-2">Теги</h5>
+                <div class="d-flex flex-wrap gap-1">
+                    <span class="badge bg-secondary">#ИИ</span>
+                    <span class="badge bg-secondary">#Эко</span>
+                    <span class="badge bg-secondary">#Нейро</span>
+                    <span class="badge bg-secondary">#БАС</span>
                 </div>
             </div>
-
-            <div class="col-12 col-md-6 col-lg-4">
-                <div class="card h-100 shadow-sm">
-                    <div class="card-body d-flex flex-column">
-                        <div class="d-flex justify-content-between align-items-start mb-3">
-                            <h2 class="card-title h5">Товар 2</h2>
-                            <span class="badge bg-warning text-dark">Хит</span>
-                        </div>
-
-                        <p class="card-text text-muted">
-                            Краткое описание второго учебного товара.
-                        </p>
-
-                        <p class="fw-bold fs-5 mt-auto">1500 руб.</p>
-
-                        <div class="d-flex gap-2">
-                            <a class="btn btn-primary" href="product.html">Подробнее</a>
-                            <button
-                            class="btn btn-outline-primary"
-                            type="button"
-                            data-bs-toggle="modal"
-                            data-bs-target="#orderModal"
-                            >
-                            Заказать
-                            </button>
-                        </div>
-                    </div>
-                </div>
+        </aside>
+        <section class="col-lg-9">
+            <div class="d-flex justify-content-between align-items-center mb-4">
+                <h2 class="fw-bold mb-0">Активные сборы</h2>
+                <select class="form-select w-auto">
+                    <option>Сначала популярные</option>
+                    <option>По дате добавления</option>
+                </select>
             </div>
 
-            <div class="col-12 col-md-6 col-lg-4">
-                <div class="card h-100 shadow-sm">
-                    <div class="card-body d-flex flex-column">
-                        <div class="d-flex justify-content-between align-items-start mb-3">
-                            <h2 class="card-title h5">Товар 3</h2>
-                            <span class="badge bg-danger">Скидка</span>
-                        </div>
-
-                        <p class="card-text text-muted">
-                            Краткое описание третьего учебного товара.
-                        </p>
-
-                        <p class="fw-bold fs-5 mt-auto">2000 руб.</p>
-
-                        <div class="d-flex gap-2">
-                            <a class="btn btn-primary" href="product.html">Подробнее</a>
-                            <button
-                            class="btn btn-outline-primary"
-                            type="button"
-                            data-bs-toggle="modal"
-                            data-bs-target="#orderModal"
-                            >
-                            Заказать
-                            </button>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-        <section class="container my-5">
-            <h2 class="h4 mb-3">Частые вопросы</h2>
-
-            <div class="accordion" id="faqAccordion">
-                <div class="accordion-item">
-                    <h3 class="accordion-header">
-                        <button
-                            class="accordion-button"
-                            type="button"
-                            data-bs-toggle="collapse"
-                            data-bs-target="#faqOne"
-                            aria-expanded="true"
-                            aria-controls="faqOne"
-                        >
-                            Можно ли оформить заявку без регистрации?
-                        </button>
-                    </h3>
-                    <div
-                        id="faqOne"
-                        class="accordion-collapse collapse show"
-                        data-bs-parent="#faqAccordion"
-                    >
-                        <div class="accordion-body">
-                            Да, в учебном проекте заявка оформляется без регистрации.
+            <div class="row row-cols-1 row-cols-md-2 g-4">
+                <div class="col">
+                    <div class="card h-100 border-0 shadow-sm project-card">
+                        <div class="placeholder-box text-muted">Прототип «Атлант-М»</div>
+                        <div class="card-body d-flex flex-column justify-content-between">
+                            <div>
+                                <span class="badge badge-tech mb-2">Робототехника</span>
+                                <h5 class="card-title fw-bold">Экзоскелет «Атлант-М»</h5>
+                                <p class="card-text text-muted small">Медицинский нейроэкзоскелет с ИИ для моторной реабилитации.</p>
+                            </div>
+                            <div class="mt-3">
+                                <div class="progress mb-2" style="height: 8px;">
+                                    <div class="progress-bar bg-info" style="width: 65%"></div>
+                                </div>
+                                <div class="d-flex justify-content-between text-muted small mb-3">
+                                    <span>Собрано: 650 000 ₽</span>
+                                    <strong>65%</strong>
+                                </div>
+                                <div class="d-flex gap-2">
+                                    <a href="product1.html" class="btn btn-outline-primary btn-sm flex-grow-1">Подробнее</a>
+                                    <button class="btn btn-info btn-sm text-white fw-bold px-3" data-bs-toggle="modal" data-bs-target="#quickSupportModal">Поддержать</button>
+                                </div>
+                            </div>
                         </div>
                     </div>
                 </div>
 
-                <div class="accordion-item">
-                    <h3 class="accordion-header">
-                        <button
-                            class="accordion-button collapsed"
-                            type="button"
-                            data-bs-toggle="collapse"
-                            data-bs-target="#faqTwo"
-                            aria-expanded="false"
-                            aria-controls="faqTwo"
-                            >
-                            Где используется Bootstrap?
-                        </button>
-                    </h3>
-                    <div
-                        id="faqTwo"
-                        class="accordion-collapse collapse"
-                        data-bs-parent="#faqAccordion"
-                    >
-                        <div class="accordion-body">
-                            Bootstrap используется для сетки, карточек, форм, навигации, сообщений и модальных окон.
+                <div class="col">
+                    <div class="card h-100 border-0 shadow-sm project-card">
+                        <div class="placeholder-box text-muted">Лаборатория биопластика</div>
+                        <div class="card-body d-flex flex-column justify-content-between">
+                            <div>
+                                <span class="badge badge-tech mb-2">Биотехнологии</span>
+                                <h5 class="card-title fw-bold">Пластик из водорослей</h5>
+                                <p class="card-text text-muted small">Органическая биоразлагаемая упаковка, исчезающая в почве за 14 дней.</p>
+                            </div>
+                            <div class="mt-3">
+                                <div class="progress mb-2" style="height: 8px;">
+                                    <div class="progress-bar bg-info" style="width: 40%"></div>
+                                </div>
+                                <div class="d-flex justify-content-between text-muted small mb-3">
+                                    <span>Собрано: 400 000 ₽</span>
+                                    <strong>40%</strong>
+                                </div>
+                                <div class="d-flex gap-2">
+                                    <a href="product2.html" class="btn btn-outline-primary btn-sm flex-grow-1">Подробнее</a>
+                                    <button class="btn btn-info btn-sm text-white fw-bold px-3" data-bs-toggle="modal" data-bs-target="#quickSupportModal">Поддержать</button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col">
+                    <div class="card h-100 border-0 shadow-sm project-card">
+                        <div class="placeholder-box text-muted">Фильтр AeroГрин</div>
+                        <div class="card-body d-flex flex-column justify-content-between">
+                            <div>
+                                <span class="badge badge-tech mb-2">Экология</span>
+                                <h5 class="card-title fw-bold">Био-фильтр «AeroГрин»</h5>
+                                <p class="card-text text-muted small">Уличные станции очистки воздуха на основе живых микроводорослей.</p>
+                            </div>
+                            <div class="mt-3">
+                                <div class="progress mb-2" style="height: 8px;">
+                                    <div class="progress-bar bg-info" style="width: 82%"></div>
+                                </div>
+                                <div class="d-flex justify-content-between text-muted small mb-3">
+                                    <span>Собрано: 1 230 000 ₽</span>
+                                    <strong>82%</strong>
+                                </div>
+                                <div class="d-flex gap-2">
+                                    <a href="product3.html" class="btn btn-outline-primary btn-sm flex-grow-1">Подробнее</a>
+                                    <button class="btn btn-info btn-sm text-white fw-bold px-3" data-bs-toggle="modal" data-bs-target="#quickSupportModal">Поддержать</button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col">
+                    <div class="card h-100 border-0 shadow-sm project-card">
+                        <div class="placeholder-box text-muted">БПЛА АгроСкан</div>
+                        <div class="card-body d-flex flex-column justify-content-between">
+                            <div>
+                                <span class="badge badge-tech mb-2">Робототехника</span>
+                                <h5 class="card-title fw-bold">Дрон «АгроСкан»</h5>
+                                <p class="card-text text-muted small">Беспилотный комплекс автоматического анализа состояния посевов и почв.</p>
+                            </div>
+                            <div class="mt-3">
+                                <div class="progress mb-2" style="height: 8px;">
+                                    <div class="progress-bar bg-info" style="width: 15%"></div>
+                                </div>
+                                <div class="d-flex justify-content-between text-muted small mb-3">
+                                    <span>Собрано: 150 000 ₽</span>
+                                    <strong>15%</strong>
+                                </div>
+                                <div class="d-flex gap-2">
+                                    <a href="product4.html" class="btn btn-outline-primary btn-sm flex-grow-1">Подробнее</a>
+                                    <button class="btn btn-info btn-sm text-white fw-bold px-3" data-bs-toggle="modal" data-bs-target="#quickSupportModal">Поддержать</button>
+                                </div>
+                            </div>
                         </div>
                     </div>
                 </div>
             </div>
         </section>
-    </main>
-    <div
-            class="modal fade"
-            id="orderModal"
-            tabindex="-1"
-            aria-labelledby="orderModalLabel"
-            aria-hidden="true"
-        >
-        <div class="modal-dialog">
-            <div class="modal-content">
-                <div class="modal-header">
-                    <h2 class="modal-title h5" id="orderModalLabel">
-                    Быстрая заявка
-                    </h2>
-                    <button
-                    type="button"
-                    class="btn-close"
-                    data-bs-dismiss="modal"
-                    aria-label="Закрыть"
-                    ></button>
-                </div>
+  </main>
 
-                <div class="modal-body">
-                    <p class="text-muted">
-                    Оставьте контактные данные, и менеджер свяжется с вами.
-                    </p>
-
-                    <form>
-                        <div class="mb-3">
-                            <label for="modal-name" class="form-label">Имя</label>
-                            <input id="modal-name" type="text" class="form-control" required>
-                        </div>
-
-                        <div class="mb-3">
-                            <label for="modal-phone" class="form-label">Телефон</label>
-                            <input id="modal-phone" type="tel" class="form-control" required>
-                        </div>
-
-                        <div class="form-check mb-3">
-                            <input id="modal-agree" class="form-check-input" type="checkbox" required>
-                            <label class="form-check-label" for="modal-agree">
-                            Согласен на обработку данных
-                            </label>
-                        </div>
-                    </form>
-                </div>
-
-                <div class="modal-footer">
-                    <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">
-                    Закрыть
-                    </button>
-                    <button type="button" class="btn btn-primary">
-                    Отправить
-                    </button>
-                </div>
-            </div>
+  <!-- Модальное окно быстрой поддержки -->
+  <div class="modal fade" id="quickSupportModal" tabindex="-1">
+    <div class="modal-dialog">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h5 class="modal-title fw-bold">Быстрая поддержка проекта</h5>
+          <button type="button" class="btn-close" data-bs-close="modal"></button>
         </div>
-    </div>
-    <script
-        src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js">
-    </script>
-    <footer class="bg-dark text-white py-4 mt-5">
-        <div class="container">
-            <div class="row align-items-center g-3">
-                <div class="col-12 col-md-6">
-                    <p class="mb-0">
-                        &copy; 2026 Bootstrap Shop. Учебный проект.
-                    </p>
-                </div>
-
-                <div class="col-12 col-md-6 text-md-end">
-                    <a class="text-white text-decoration-none me-3" href="catalog.html">
-                        Каталог
-                    </a>
-                    <a class="text-white text-decoration-none" href="order.html">
-                        Заявка
-                    </a>
-                </div>
+        <div class="modal-body">
+          <form>
+            <div class="mb-3">
+              <label class="form-label">Сумма взноса (₽)</label>
+              <input type="number" class="form-value form-control" value="1000">
             </div>
+            <div class="mb-3">
+              <label class="form-label">Ваше имя (или анонимно)</label>
+              <input type="text" class="form-value form-control" placeholder="Иван И.">
+            </div>
+            <div class="form-check mb-3">
+              <input type="checkbox" class="form-check-input" id="termsCheck">
+              <label class="form-check-label small" for="termsCheck">Согласен с правилами платформы</label>
+            </div>
+            <button type="submit" class="btn btn-info w-100 text-white">Перейти к оплате</button>
+          </form>
+        </div>
+      </div>
+    </div>
+  </div>
+
+    <footer class="bg-dark text-white py-4 mt-5">
+        <div class="container text-center">
+            <p class="mb-0">&copy; 2026 ТехноСтарт. Платформа научного краудфандинга.</p>
+            <small class="mb-1">Проект разработан для поддержки инноваций и молодых ученых.</small>
         </div>
     </footer>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="js/main.js"></script>
 </body>
+</html>

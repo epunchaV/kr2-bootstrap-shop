@@ -1,16 +1,70 @@
+:root {
+  --primary-dark: #0f172a;
+  --accent-neon: #0ea5e9;
+  --bg-light: #f8fafc;
+}
+
 body {
   min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  background-color: var(--bg-light);
+  font-family: system-ui, -apple-system, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+}
+
+main {
+  flex: 1;
+}
+
+.navbar {
+  background-color: var(--primary-dark) !important;
+}
+
+.hero-section {
+  background: linear-gradient(135deg, #0f172a 0%, #1e293b 100%);
+  color: white;
+  padding: 60px 0;
 }
 
 .placeholder-box {
   min-height: 240px;
+  background-color: #e2e8f0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 8px;
 }
 
 .placeholder-image {
   min-height: 320px;
+  background-color: #cbd5e1;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 8px;
 }
 
 .card-img-top {
-  height: 180px;
+  height: 200px;
   object-fit: cover;
+}
+
+.project-card {
+  transition: transform 0.2s, box-shadow 0.2s;
+}
+
+.project-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 10px 20px rgba(0,0,0,0.1);
+}
+
+.badge-tech {
+  background-color: rgba(14, 165, 233, 0.1);
+  color: var(--accent-neon);
+  border: 1px solid rgba(14, 165, 233, 0.2);
+}
+
+footer {
+  background-color: var(--primary-dark);
+  color: #94a3b8;
 }
