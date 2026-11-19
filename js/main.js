@@ -67,15 +67,23 @@ document.addEventListener('DOMContentLoaded', () => {
 
         setTimeout(() => {
             form.reset();
+            form.classList.remove('was-validated');
             submitBtn.disabled = false;
             submitBtn.innerText = originalText;
 
+            const contactAlert = document.getElementById('contact-success-alert');
+            if (form.id === 'contact-form' && contactAlert) {
+            contactAlert.classList.remove('d-none');
+            contactAlert.scrollIntoView({ behavior: 'smooth', block: 'center' });
+            } else {
+            alert('Действие выполнено успешно! Данные отправлены в систему «ТехноСтарт».');
             const modal = document.querySelector('.modal.show');
             if (modal) {
-            const modalInstance = bootstrap.Modal.getInstance(modal);
-            if (modalInstance) modalInstance.hide();
+                const modalInstance = bootstrap.Modal.getInstance(modal);
+                if (modalInstance) modalInstance.hide();
             }
-        }, 1500);
+            }
+        }, 1000);
         });
     });
 
