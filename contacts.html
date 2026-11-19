@@ -61,7 +61,7 @@
             <div class="col-12">
                 <div class="card p-4 p-md-5 border-0 shadow-sm">
                     <h4 class="fw-bold mb-4">Напишите нам</h4>
-                    <form>
+                    <form id="contact-form">
                         <div class="row g-3 mb-3">
                             <div class="col-md-6">
                                 <label class="form-label">Ваше имя / Компания</label>
@@ -75,6 +75,11 @@
                         <div class="mb-4">
                             <label class="form-label">Сообщение</label>
                             <textarea class="form-control" rows="4" required placeholder="Ваш вопрос по экспертизе, сотрудничеству или инвестициям..."></textarea>
+                        </div>
+                        <!-- Уведомление об успешной отправке (изначально скрыто классом d-none) -->
+                        <div id="contact-success-alert" class="alert alert-success alert-dismissible fade show d-none" role="alert">
+                            <strong>✅ Обращение отправлено!</strong> Мы получили ваше сообщение и ответим на указанный E-mail в течение 24 часов.
+                            <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Закрыть"></button>
                         </div>
                         <button type="submit" class="btn btn-info text-dark fw-bold px-5">Отправить сообщение</button>
                     </form>
