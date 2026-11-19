@@ -68,3 +68,80 @@ footer {
   background-color: var(--primary-dark);
   color: #94a3b8;
 }
+
+/* 1. Плавный переход при смене светлой и тёмной темы */
+body, .card, .navbar, footer, .bg-white, .bg-light {
+  transition: background-color 0.35s ease, color 0.35s ease, border-color 0.35s ease;
+}
+
+/* 2. Неоновое свечение и отклик главных кнопок */
+.btn-info {
+  transition: transform 0.2s ease, box-shadow 0.2s ease, background-color 0.2s ease;
+}
+
+.btn-info:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 6px 20px rgba(14, 165, 233, 0.45);
+}
+
+.btn-info:active {
+  transform: translateY(0);
+}
+
+/* 3. Интерактивность тегов в каталоге */
+.tag-badge {
+  transition: transform 0.15s ease, background-color 0.15s ease;
+}
+
+.tag-badge:hover {
+  transform: scale(1.08);
+  background-color: var(--accent-neon) !important;
+  color: #0f172a;
+}
+
+/* 4. Анимация пульсации для статуса проверки */
+@keyframes pulse-glow {
+  0% { box-shadow: 0 0 0 0 rgba(14, 165, 233, 0.7); }
+  70% { box-shadow: 0 0 0 8px rgba(14, 165, 233, 0); }
+  100% { box-shadow: 0 0 0 0 rgba(14, 165, 233, 0); }
+}
+
+.badge-tech {
+  animation: pulse-glow 2.5s infinite;
+}
+
+/* 5. Классы для плавного появления при скролле */
+.reveal-item {
+  opacity: 0;
+  transform: translateY(25px);
+  transition: opacity 0.6s ease-out, transform 0.6s ease-out;
+}
+
+.reveal-item.visible {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+/* Поддержка тёмной темы (Dark Mode) */
+[data-bs-theme="dark"] body {
+  background-color: #0b1120;
+  color: #e2e8f0;
+}
+
+[data-bs-theme="dark"] .card {
+  background-color: #1e293b;
+  border-color: #334155 !important;
+}
+
+[data-bs-theme="dark"] .placeholder-box,
+[data-bs-theme="dark"] .placeholder-image {
+  background-color: #334155;
+  color: #94a3b8 !important;
+}
+
+[data-bs-theme="dark"] .bg-white,
+[data-bs-theme="dark"] .bg-light {
+  background-color: #162032 !important;
+  color: #e2e8f0;
+  border-color: #334155 !important;
+}
